@@ -74,13 +74,15 @@ const HeroSection = () => {
           </div>
 
           <div className="font-semibold flex flex-col md:flex-row justify-center items-center gap-x-5 gap-2  max-w-xs px-5">
-            <Button
-              size="lg"
-              className="bg-primary/80 hover:bg-primary cursor-pointer border border-border rounded-full w-full md:w-auto"
-            >
-              <FaDownload /> Download CV
-            </Button>
-            <a href="#" className="w-full">
+            <a href="/SalahEddineSoussi.pdf" target="_blank">
+              <Button
+                size="lg"
+                className="bg-primary/80 hover:bg-primary cursor-pointer border border-border rounded-full w-full md:w-auto"
+              >
+                <FaDownload /> Download CV
+              </Button>
+            </a>
+            <a href="#contact" className="w-full">
               <Button
                 size="lg"
                 variant="outline"
