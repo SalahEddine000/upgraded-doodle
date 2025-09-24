@@ -43,7 +43,7 @@ const SkillsSection = () => {
   const CodingLanguages = ["Coding", "Languages"];
   const Frameworks = ["Frameworks", "Libraries"];
 
-  let CloudSkillsList = [
+  const CloudSkillsList = [
     {
       name: "Automation",
       time: "2y ago",
@@ -76,7 +76,7 @@ const SkillsSection = () => {
     },
   ];
 
-  let CodingLanguagesSkills = [
+  const CodingLanguagesSkills = [
     {
       name: "PHP",
       time: "1y ago",
@@ -109,7 +109,7 @@ const SkillsSection = () => {
     },
   ];
 
-  let FrameworksSkills1 = [
+  const FrameworksSkills1 = [
     {
       name: "Laravel",
       time: "1y ago",
@@ -135,7 +135,7 @@ const SkillsSection = () => {
       color: "#1E86FF",
     },
   ];
-  let FrameworksSkills2 = [
+  const FrameworksSkills2 = [
     {
       name: "Ionic",
       time: "8m ago",

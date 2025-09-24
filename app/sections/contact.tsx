@@ -78,8 +78,8 @@ const ContactSection = () => {
                     Get in Touch
                   </h2>
                   <p className="text-foreground/60 font-me mb-3 sm:mb-4 md:mb-6">
-                    If you have any questions or concerns, please don't hesitate
-                    to contact me.
+                    If you have any questions or concerns, please don&apos;t
+                    hesitate to contact me.
                   </p>
 
                   <form
