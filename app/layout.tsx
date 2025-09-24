@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Salah Eddine Soussi | Cloud Support Engineer",
   description:
-    "Portfolio of a Cloud Support Engineer specializing in Microsoft Azure, and cloud infrastructure. Showcasing expertise in troubleshooting, coding, automation, and support solutions. Built with Next.js for performance and SEO.",
+    "Salah Eddine Soussi, a certified Cloud Support Engineer with expertise in Microsoft Azure, M365, and Power Platform. Experienced in designing Azure solutions and building apps that solve real-world challenges.",
 };
 
 export default function RootLayout({
