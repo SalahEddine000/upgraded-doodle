@@ -4,17 +4,27 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FadeInSection } from "@/components/fade-in";
 
+type SubmitStatus = "success" | "error" | null;
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>(null); // 'success', 'error', or null
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -22,7 +32,7 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -41,7 +51,11 @@ const ContactSection = () => {
       }
 
       // Prepare template parameters
-      const templateParams = {
+      const templateParams: {
+        from_name: string;
+        from_email: string;
+        message: string;
+      } = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
@@ -112,7 +126,7 @@ const ContactSection = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Message"
-                      rows="4"
+                      rows={4}
                       className="w-full px-4 py-3 sm:py-3.5 bg-muted border text-foreground border-border rounded-lg md:rounded-xl focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent resize-none transition-all duration-300 hover:shadow-md focus:shadow-lg focus:-translate-y-0.5"
                     />
 
